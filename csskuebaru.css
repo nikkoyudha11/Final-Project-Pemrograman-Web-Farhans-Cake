@@ -1,0 +1,392 @@
+:root {
+  --primary: chocolate;
+  --bg: whitesmoke;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*supaya ga ngatur dimensi elemen lagi pas dikasih padding atau border*/
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  min-height: 2000px;
+}
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(240, 248, 255, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(92, 76, 76);
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-navigasi a {
+  color: rgb(92, 76, 76);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-navigasi a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-navigasi a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid chocolate;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-navigasi a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-search a {
+  color: rgb(92, 76, 76);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-search a:hover {
+  color: var(--primary);
+}
+
+#hamburger {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("kue/deluxe-red-velvet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 5%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  /* linear-gradient(90deg, rgb(0, 0, 0) 20%, rgba(255,255,255,0)50%) */
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(10, 10, 10, 5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.5em;
+  margin-top: 1rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(20, 20, 20, 10);
+  line-height: 1.4;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgba(1, 1, 5, 0.5);
+}
+/* tentangkami Section */
+.tentangkami,
+.menu {
+  padding: 8rem 7% 1.4rem; /*Atas 10rem kiri kanan 7% bawah 1.4rem */
+}
+
+.tentangkami h2,
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: grey;
+}
+
+.tentangkami h2 span,
+.menu h2 span {
+  color: var(--primary);
+}
+
+.tentangkami .row {
+  display: flex;
+}
+
+.tentangkami .row .tentangkami-img {
+  flex: 1 1 45rem;
+}
+
+.tentangkami .row .tentangkami-img img {
+  width: 100%;
+  max-height: 40rem;
+}
+
+.tentangkami .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.tentangkami .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: grey;
+  text-shadow: 1px 1px 0.5px rgba(10, 10, 10, 5);
+}
+
+.tentangkami .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: grey;
+  text-shadow: 1px 1px 1.5px rgba(10, 10, 10, 5);
+}
+
+/* Menu Section */
+.menu h2 {
+  margin-bottom: 1rem;
+}
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: black;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu-card {
+  text-align: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 2px solid rgba(10, 10, 10, 5);
+  background: antiquewhite;
+  margin-right: 1rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+  height: 60%;
+  max-width: 250px;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+  color: brown;
+  font-size: 1.5em;
+}
+
+.menu .row .menu-card .menu-card-price,
+.menu .row .menu-card .menu-card-deskripsi {
+  padding-bottom: 5px;
+}
+
+.button-beli {
+  box-shadow: 1px 1px 1px rgb(5, 5, 5);
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 2px solid rgba(10, 10, 10, 5);
+  background: var(--primary);
+}
+.button-beli:hover {
+  color: #14396a !important;
+  background: #468ccf;
+}
+
+.button-beli a {
+  font-family: arial;
+  color: whitesmoke !important;
+  font-size: 14px;
+}
+
+.tentangkami .row .content h4 {
+  font-size: 1.8rem;
+  color: grey;
+  float: right;
+}
+
+/* button beli tumbas */
+.tentangkami .row .content .button-beli-tumbas {
+  box-shadow: 1px 1px 1px rgb(5, 5, 5);
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 2px solid rgba(10, 10, 10, 5);
+  background: var(--primary);
+  width: 100%;
+}
+.tentangkami .row .content .button-beli-tumbas:hover {
+  color: #14396a !important;
+  background: #468ccf;
+}
+
+.tentangkami .row .content .button-beli-tumbas a {
+  font-family: arial;
+  color: whitesmoke !important;
+  font-size: 16px;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 750px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger {
+    display: inline-block;
+  }
+
+  .navbar .navbar-navigasi {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-navigasi.active {
+    right: 0;
+  }
+  .navbar .navbar-navigasi a {
+    color: var(rgb(92, 76, 76));
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-navigasi a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-navigasi a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .tentangkami .row {
+    flex-wrap: wrap;
+  }
+
+  .tentangkami .row .tentangkami-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .tentangkami .row .content {
+    padding: 0;
+  }
+
+  .tentangkami .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .tentangkami .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu .row {
+    flex-wrap: wrap;
+  }
+
+  .menu .row .menu-card h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu .row .menu-card p {
+    font-size: 1.6rem;
+  }
+
+  .menu-card {
+    height: 80rem;
+  }
+}
+
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar .navbar-navigasi {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-navigasi.active {
+    right: 0;
+  }
+}
